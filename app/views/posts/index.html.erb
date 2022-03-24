@@ -1,2 +1,6 @@
-<h1>Hello World!</h1>
-<p>Good to see you folks! in the index page.</p>
+<% @posts.each do |post| %>
+  <h2><%= post.title %></h2>
+  <div><%= truncate(post.body, :length => 35) %></div>
+  <br>
+  <%= link_to 'Read Post', post %>
+<% end %>
