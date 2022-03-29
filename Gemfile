@@ -1,6 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+
+# bootstraps
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'popper_js'
+gem 'simple_form'
+gem 'tether-rails'
+
 ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
