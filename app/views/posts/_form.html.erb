@@ -1,18 +1,16 @@
-<div class="form-content">
+
+<form>
 <%= form_for @post do |f| %>
-<p>
-  <%= f.label :title %><br>
-</p>
-<div class="form-field">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Title</label>
   <%= f.text_field :title, autofocus: true, placeholder: "Title", :required => 'required',:size =>"50", :maxlength=>"100"%>
   </div>
-  <br>
-  <br>
-  <%= f.label :body %><br>
-  <div class="form-field">
-  <%= f.text_area :body, autofocus: true, placeholder: "Details...", :required => 'required',:hieght=>"200", :size =>"50x10"%>
-  </div><br>
-  <br>
-  <%= f.submit "Submit" %>
-<% end %>
-</div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Detail</label>
+    <%= f.text_area :body, autofocus: true, placeholder: "Details...", :required => 'required', :size =>"50x10"%>
+  </div>
+    <div class="btn btn-primary">
+   <%= f.submit "Submit" %>
+   </div>
+   <% end %>
+</form>
