@@ -10,8 +10,10 @@
   </head>
 
   <body>
-    <%= link_to 'Home', root_path %>
+  <div class="container text-right">
+    <%= link_to 'Home', root_path %> |
     <%= link_to 'New Post', new_post_path %>
+  </div>
     <%= yield %>
   </body>
 </html>

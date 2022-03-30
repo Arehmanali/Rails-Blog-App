@@ -1,3 +1,37 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container .post{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container .post .post-content h2{
+  color: blue;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container .post .post-content h1{
+  color: blue;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container .post .post-content{
+  color:dimgray;
+  font-size:24px;
+  border-style: solid;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.container .form{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-style: solid;
+  padding:20px;
+  margin-top: 10px;
+}
+
+.container .form h1{
+  font-weight: bold;
+}
