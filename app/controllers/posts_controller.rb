@@ -3,6 +3,7 @@
 # controller for Post model
 class PostsController < ApplicationController
   before_action :find_post, only: %I[show edit update destroy]
+
   def index
     @posts = Post.all.order('created_at DESC')
   end
