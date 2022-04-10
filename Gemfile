@@ -6,8 +6,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'popper_js'
-gem 'simple_form'
 gem 'tether-rails'
+gem "simple_form"
 
 ruby '2.7.2'
 

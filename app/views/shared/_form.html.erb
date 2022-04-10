@@ -1,0 +1,27 @@
+
+<%= form_for @post do |f| %>
+  <% if @post.errors.any?%>
+  <div class="error-message">
+    <h2><span style="color:red">Errors:</span><h2>
+    <ul>
+      <% @post.errors.full_messages.each do |message|%>
+        <li>
+        <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <div class="form-label">
+    <%= f.label :title %>
+  </div>
+  <%= f.text_field :title, autofocus: true, placeholder: "Title",size: 52, maxlength: 10%>
+  <br>
+  <br>
+  <div class="form-label">
+  <%= f.label :body%>
+  </div>
+  <%= f.text_area :body, autofocus: true, placeholder: "Details...", size: "50x10"%>
+  <br>
+  <%= f.submit %>
+<% end %>
