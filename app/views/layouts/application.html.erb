@@ -13,37 +13,11 @@
   </head>
 
   <body>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-ligth" style="padding-left: 15%;">
-    <%= link_to "Blog App", root_path, class: 'navbar-brand'%>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <%= link_to "Home", root_path, class: 'nav-link'%>
-        </li>
-        <li class="nav-item">
-          <%= link_to "New Post", new_post_path, class: 'nav-link'%>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
+    <% @logo_title = 'Blog App'%>
+    <%= render partial: 'shared/nav', locals: {logo_title: @logo_title } %>
     <%= yield %>
-    <!-- Footer -->
-    <footer class="page-footer font-small">
+    <%= render 'shared/footer' %>
 
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2021 Copyright:
-      <%= link_to "Blog App by Rehman Ali", root_path%>
-      </div>
-      <!-- Copyright -->
-
-    </footer>
-    <!-- Footer -->
   </body>
 
 </html>

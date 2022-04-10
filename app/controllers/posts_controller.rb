@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: %I[show edit update destroy]
 
   def index
-    @posts = Post.all.order('created_at DESC')
+    @posts = Post.long_title.long_body.all.order('created_at DESC')
   end
 
   def new
@@ -16,7 +16,6 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.valid?
       @post.save
-
       redirect_to @post
     else
       render 'new'
@@ -51,5 +50,7 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :body)
+  end
+  def error
   end
 end
