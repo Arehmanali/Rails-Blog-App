@@ -1,6 +1,7 @@
 
 <div class="container text-center">
 <div class="post">
+
 <% @posts.each do |post| %>
 <div class="post-content">
   <h1><%= link_to "#{post.title}", post %></h1>
@@ -9,5 +10,6 @@
   <%= link_to 'Read Post', post , style: 'text-decoration: underline;'%>
   </div>
 <% end %>
+<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 </div>
 </div>

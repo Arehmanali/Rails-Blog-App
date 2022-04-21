@@ -9,6 +9,13 @@ gem 'popper_js'
 gem 'tether-rails'
 gem "simple_form"
 
+# devise
+gem 'devise'
+
+# pagination
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+
 ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
